@@ -35,4 +35,5 @@ app.use(express.json());
 app.get('/', (req, res) => res.send('Chatbot backend running ✔'));
 app.use('/bot/v1', chatbotmessege);
 
-export default serverless(app);
+module.exports = app;
+module.exports.handler = serverless(app);
