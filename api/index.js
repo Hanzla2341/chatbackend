@@ -35,5 +35,5 @@ app.use(express.json());
 app.get('/', (req, res) => res.send('Chatbot backend running ✔'));
 app.use('/bot/v1', chatbotmessege);
 
-module.exports = app;
-module.exports.handler = serverless(app);
+// Vercel Lambda Export
+export const handler = serverless(app);
