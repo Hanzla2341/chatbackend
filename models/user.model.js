@@ -1,20 +1,19 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const userSchema=new mongoose.Schema({
-    sender:{
-        type:String,
-        required:true,
-        enum:["user"]
-    },
-    text:{
-        type:String,
-        required:true
-    },
-    timstamp:{
-        type:Date,
-        default:Date.now
-    }
-})
+const userSchema = new mongoose.Schema({
+  sender: {
+    type: String,
+    required: true,
+    enum: ["user"]
+  },
+  text: {
+    type: String,
+    required: true
+  },
+  timestamp: {
+    type: Date,
+    default: Date.now
+  }
+});
 
-const User=mongoose.model("User",userSchema)
-export default User;
+module.exports = mongoose.model("User", userSchema);
