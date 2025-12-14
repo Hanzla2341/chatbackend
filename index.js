@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const connectDB = require("../config/db.js");
-const chatbotRoutes = require("../routes/chatbot.route.js");
+const connectDB = require("./config/db.js");
+const chatbotRoutes = require("./routes/chatbot.route.js");
 
 dotenv.config();
 
@@ -34,4 +34,4 @@ app.get("/", (req, res) => {
 
 app.use("/api", chatbotRoutes);
 
-module.exports = app;
+module.exports=app;

@@ -3,6 +3,7 @@ const User = require("../models/user.model.js");
 
 const Message = async (req, res) => {
   try {
+    console.log("chatbot running")
     const { text } = req.body;
 
     if (!text?.trim()) {
